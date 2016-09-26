@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-cleancss');
+var responsive = require('gulp-responsive');
 
 
 //webserver task
@@ -29,6 +30,24 @@ gulp.task('clean-css', function(){
       .pipe(gulp.dest('/app/css/style.css.min'));
 });
 
+//task for images
+gulp.task('images', function(){
+  return gulp.src('app/img/*.{jpg,png}')
+              .pipe(responsive({
+                '*': [{
+                  width: 400,
+                  rename: { suffix: '-small'},
+                }, {
+                  width: 640,
+                  rename: { suffix: '-medium'},
+                },{
+                  width: 1600,
+                  rename: { suffix: '-large'},
+                }]
+              }))
+              .pipe(gulp.dest('app/img/'));
+});
+
 //watch for changes in the css and js files
 gulp.task('watch', function(){
   gulp.watch('/app/js/*.js', ['scripts'])
@@ -36,4 +55,4 @@ gulp.task('watch', function(){
 });
 
 //default task to run for the server
-gulp.task('default', ['webserver', 'scripts', 'clean-css', 'watch']);
+gulp.task('default', ['webserver', 'scripts', 'clean-css', 'images', 'watch']);
