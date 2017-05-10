@@ -1,6 +1,6 @@
 # Resume Site
 
-In this project, we were provided a Resume Site Mock up that we needed to follow to create our own Resume Site.
+In this project, we were provided a Resume Site Mock up that we needed to follow to create our own Resume Site. This site was Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.
 
 # Documentation
 
