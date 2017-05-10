@@ -2,10 +2,72 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test Website</title>
+    <title>Portfolio Site</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="http://weloveiconfonts.com/api/?family=zocial|entypo" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-        <h1> We would like to know that this is working as it should </h1>
-        <h2> Something else </h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1> <span class="entypo-vcard"></span></h1>
+        </div>
+        <div class="contact col-md-6">
+          <h1 class="text-right">Edwin Rivera </h1>
+          <h2 class="text-right">Full Stack Webdeveloper </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Portfolio Site </h1>
+            <p> Hello and welcome to my portfolio site. I'm an aspiring Full Stack Web Developer who is excited to learn new techniques and frameworks for all things on the web. Below you will find a list of technologies and techniques used to design this webpage. In this webpage I'm using bootstrap for the grid based responsive design.</p>
+            <p>I've created Gulp Tasks for a Web server that uses live reload. Tasks to minify my Javascript and CSS files. A watch task that will run whenever any changes are made to the tasks that are to be minified. A task for responsive images that creates 3 different images for more flexibility between devices that should let the site load faster depending on what screen size the device you're viewing the site on. This site also uses Google Fonts 'Bitter' font for text and Zocial icons in the footer and used as the icon for this website. </p>
+
+            <picture id="banner">
+              <source media="(min-width: 750px)" srcset="img/editor-large.png" />
+              <source media="(min-width: 500px)" srcset="img/editor-medium.png" />
+              <img src="img/editor-small.png" class="img-responsive" alt="Editor Image" />
+            </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="city">City</h1>
+          <picture>
+            <source media="(min-width: 750px)" srcset="img/city-large.png" />
+            <source med="(min-width: 500px)" srcset="img/city-medium.png" />
+            <img src="img/city-small.png" class="img-responsive" alt="City in China" />
+          </picture>
+          <p>A picture of a beautiful city with most likely a lot of things going on. </p>
+        </div>
+        <div class="col-md-4">
+          <h1 class="boat">Boat</h1>
+          <picture>
+            <source media="(min-width: 750px)" srcset="img/boat-large.png" />
+            <source media="(min-wicth: 500px)" srcset="img/boat-medium.png" />
+            <img src="img/boat-small.png" class="img-responsive" alt="Boat in Ocean" />
+          </picture>
+          <p> Just a boat sailing through the ocean. </p>
+        </div>
+        <div class="col-md-4">
+          <h1 class="train">Train</h1>
+          <picture>
+            <source media="(min-width: 750px)" srcset="img/train-large.png" />
+            <source media="(min-width: 500px)" srcset="img/train-medium.png" />
+            <img src="img/train-small.png" class="img-responsive" alt="Train at station" />
+          </picture>
+          <p>A picture of a train at the train station just to set the mood.</p>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="col-md-12">
+          <span class="zocial-twitter">Example Text</span>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>

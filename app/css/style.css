@@ -1,0 +1,85 @@
+* {
+  font-family: 'Bitter', serif;
+  background-color: gray;
+}
+
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.entypo-vcard {
+  font-size: 4em;
+}
+
+footer {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+img {
+  height: 800px;
+  width: 100%;
+}
+
+.bio-image {
+  margin-top: -200px;
+  height: 800px;
+}
+
+@media screen and (max-width: 400px){
+
+  .city {
+    text-align: center;
+  }
+
+  .boat {
+    text-align: center;
+
+  }
+
+  .train {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .icon {
+    width: 50%;
+  }
+
+  .contact {
+    width: 50%;
+  }
+  .city {
+    text-align: center;
+  }
+
+  .boat {
+    text-align: center;
+
+  }
+  .train {
+    text-align: center;
+
+  }
+}

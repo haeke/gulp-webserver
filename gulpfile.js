@@ -18,20 +18,21 @@ gulp.task('webserver', function(){
 
 //minify js files in the js directory
 gulp.task('scripts', function(){
-  gulp.src('/app/js/*.js')
+  gulp.src('app/js/*.js')
       .pipe(uglify())
-      .pipe(gulp.dest('app.js/app.min.js'));
+      .pipe(gulp.dest('app/app.min.js'));
 });
 
 //minify css files in the css directory
 gulp.task('clean-css', function(){
-  gulp.src('/app/css/*.css')
+  gulp.src('app/css/*.css')
       .pipe(cleanCSS({compatibility: 'ie8'}))
-      .pipe(gulp.dest('/app/css/style.css.min'));
+      .pipe(gulp.dest('app/css/style.css.min'));
 });
 
-//task for images
+//task for responsive images images
 gulp.task('images', function(){
+  //
   return gulp.src('app/img/*.{jpg,png}')
               .pipe(responsive({
                 '*': [{
@@ -50,9 +51,9 @@ gulp.task('images', function(){
 
 //watch for changes in the css and js files
 gulp.task('watch', function(){
-  gulp.watch('/app/js/*.js', ['scripts'])
-  gulp.watch('/app/css/*.css', ['clean-css'])
+  gulp.watch('app/js/*.js', ['scripts'])
+  gulp.watch('app/css/*.css', ['clean-css'])
 });
 
 //default task to run for the server
-gulp.task('default', ['webserver', 'scripts', 'clean-css', 'images', 'watch']);
+gulp.task('default', ['webserver', 'scripts', 'clean-css', 'watch']);
