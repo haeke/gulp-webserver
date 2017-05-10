@@ -9,10 +9,10 @@ Installation/Running the website
 Getting Started -
 
 Dependencies -
-	1. NPM 2.15.1
-	In order to run the Gulp tasks you will need to have the following installed 
-	2. Sharp and node-gyp 
-	3. Gulp, Gulp-webserver, gulp-uglify, gulp-cleancss, gulp-responsive
+1. NPM 2.15.1
+In order to run the Gulp tasks you will need to have the following installed 
+2. Sharp and node-gyp 
+3. Gulp, Gulp-webserver, gulp-uglify, gulp-cleancss, gulp-responsive
 
 # File Structure
 
